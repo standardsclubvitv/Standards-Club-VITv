@@ -1,0 +1,432 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #f8f8ff;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
+/* Header (Navbar) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgb(0, 0, 0); /* Slight transparency */
+    border-bottom: 2px solid #00ffff;
+    box-shadow: 0px 4px 10px rgba(0, 191, 255, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Section */
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.college-logo {
+    height: 60px;
+}
+
+.club-logo img {
+    height: 60px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;  /* White text for better visibility */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff1493;  /* Neon pink hover effect */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        padding: 10px;
+        display: none;
+        border-radius: 5px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 70vh; /* Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 0; /* Ensuring no extra space below */
+}
+
+/* Background Video */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Hero Text */
+.animated-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0px 0px 10px #FFD700, 0px 0px 20px #FFA500;
+    animation: glowingText 1.2s infinite alternate;
+    margin-bottom: 10px; /* Reducing gap below text */
+}
+
+/* About Section */
+.about-section {
+    margin-top: -30px; /* Pulls the "About Us" section upwards */
+    padding-top: 20px; /* Ensures no overlap */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh; /* Further reduce height on mobile */
+    }
+
+    .animated-text {
+        font-size: 2.5rem; /* Adjust text size for smaller screens */
+        margin-bottom: -145px; /* Reduce space below */
+    }
+
+    .about-section {
+        margin-top: -40px; /* Further reduce gap on smaller screens */
+    }
+}
+
+
+/* About Section */
+.container {
+    border: 3px solid #00ffff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 80px auto 40px;
+    width: 80%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 15px rgba(0, 191, 255, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.8);
+}
+
+/* Board Section */
+#board {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Section Title */
+#board h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #00ffff;
+}
+
+/* Swiper Carousel Styling */
+.board-carousel {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px 0;
+}
+
+/* Member Card */
+.member-card {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 191, 255, 0.3);
+    border: 3px solid #00ffff;
+}
+
+.member-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.member-info {
+    margin-top: 10px;
+    color: #f8f8ff;
+}
+
+.member-info h3 {
+    font-size: 1.2rem;
+}
+
+.member-info p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #00ffff !important;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .board-carousel {
+        width: 50%;
+    }
+}
+
+
+/* Events Section */
+.events-container {
+    background-color: #11111100;
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.7), 0 0 25px rgba(0, 191, 255, 0.7);
+}
+
+/* Marquee Effect */
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 10px;
+    animation: marquee 25s linear infinite; /* Increased duration for slower effect */
+    width: max-content;
+}
+
+.marquee-content img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 191, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.marquee-content img:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 20, 147, 0.8);
+}
+
+/* Slower Marquee Animation */
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+/* Footer Styling */
+footer {
+    background: rgba(17, 17, 17, 0);
+    padding: 30px 20px; /* Adjusted padding */
+    color: #f8f8ff;
+    box-shadow: 0px -4px 10px rgba(0, 191, 255, 0.3);
+    text-align: center; /* Center content on small screens */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Club Logo */
+.footer-logo {
+    width: 220px; /* Slightly reduced size for better fit */
+    height: auto;
+}
+
+/* Footer Text */
+.footer-text {
+    text-align: right;
+    font-size: 1rem;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center; /* Center icons */
+}
+
+.social-icons img {
+    width: 35px; /* Slightly smaller icons */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* Remark Styling */
+.remark {
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.remark .highlight {
+    color: #00bfff; /* Cyan to match aesthetic */
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #00bfff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-text {
+        text-align: center;
+        font-size: 0.9rem; /* Smaller text */
+        margin-top: 10px;
+    }
+
+    .footer-logo {
+        width: 180px; /* Reduce size for mobile */
+    }
+
+    .social-icons {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .social-icons img {
+        width: 30px; /* Smaller icons for mobile */
+    }
+
+    .remark {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .animated-text {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .events-container {
+        width: 90%;
+    }
+
+    .marquee-content img {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+/* Fullscreen Background Video */
+.video-background {
+    position: fixed; /* Keeps video fixed in the background */
+    top: 50%;
+    left: 50%;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Keeps it behind all content */
+}
+
+/* Ensuring body takes full screen */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    background: black; /* Fallback in case video doesn't load */
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #00ffff !important;
+}
+
+/* Hide Buttons on Desktop */
+@media (min-width: 768px) {
+    .swiper-button-next, .swiper-button-prev {
+        display: none !important;
+    }
+    
+    .board-carousel {
+        width: 70%;
+        max-width: 1000px;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standards Club | Board</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">   
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./scripts.js" defer></script>
+</head>
+<body>
+
+  
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    
+   <!-- Sidebar -->
+   <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeSidebar">&times;</button>
+    <ul>
+        <li><a href="../dashboard/">Dashboard</a></li>
+        
+        <!-- Dropdown Menu -->
+        <li>
+            <button class="dropdown-btn">Event details &#9662;</button>
+            <ul class="dropdown-container">
+                <li><a href="../data/">VTOP Enrollment</a></li>
+                <li><a href="../Event Enrollement/">Members Enrolled</a></li>
+            </ul>
+        </li>
+
+        <li><a href="../events/">Event</a></li>
+        <li><a href="../info/">VITian Info</a></li>
+        <li><a href="../Notice/">Post Notice</a></li>
+    </ul>
+</div>
+
+   
+    <header>
+        <img src="../assets/logo.png" alt="Logo">
+        <h1>Standards Club VITv</h1>
+        <span id="adminName">Logged in as: Loading...</span>
+        <button id="menuBtn">☰ Menu</button>
+    </header>
+    
+
+    <div id="alertBox" class="alert-box"></div>
+
+
+    
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Users</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="container">
+        <div class="table-container">
+            <h2 class="table-title">Registered Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Registration No.</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   
+    <div id="editPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Edit User</h2>
+            <input type="hidden" id="editUserId">
+            <label>Name:</label>
+            <input type="text" id="editName">
+            <label>Email:</label>
+            <input type="text" id="editEmail" disabled>
+            <label>Mobile:</label>
+            <input type="text" id="editMobile">
+            <label>Registration No.:</label>
+            <input type="text" id="editRegNo">
+            <button onclick="updateUser()">Update</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    // Sidebar Dropdown Toggle
+    const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+    dropdownBtns.forEach(dropdownBtn => {
+        dropdownBtn.addEventListener("click", () => {
+            const dropdownContainer = dropdownBtn.nextElementSibling;  // Get the next <ul> element
+            dropdownContainer.classList.toggle("active");
+        });
+    });
+
+    // Sidebar Toggle Menu Button
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+
+    // Close Sidebar
+    const closeSidebarBtn = document.getElementById("closeSidebar");
+    closeSidebarBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+</script>

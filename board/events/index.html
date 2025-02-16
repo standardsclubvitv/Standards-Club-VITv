@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="../assets/logo.png" alt="Standards Club Logo">
+        <h1>Standards Club - VIT</h1>
+        <div class="header-btns">
+            <span id="user-name"></span>
+            <button onclick="toggleSidebar()">☰ Menu</button>
+        </div>
+    </header>
+
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeSidebar">&times;</button>
+    <ul>
+        <li><a href="../dashboard/">Dashboard</a></li>
+        
+        <!-- Dropdown Menu -->
+        <li>
+            <button class="dropdown-btn">Event details &#9662;</button>
+            <ul class="dropdown-container">
+                <li><a href="../data/">VTOP Enrollment</a></li>
+                <li><a href="../Event Enrollement/">Members Enrolled</a></li>
+            </ul>
+        </li>
+
+        <li><a href="../events/">Event</a></li>
+        <li><a href="../info/">VITian Info</a></li>
+        <li><a href="../Notice/">Post Notice</a></li>
+    </ul>
+</div>
+
+    <!-- Event Form -->
+    <div class="container">
+        <h2 class="table-title">Create/Edit Event</h2>
+        <form id="event-form">
+            <label>Event Name:</label>
+            <input type="text" id="event-name" required>
+
+            <label>Date & Time (IST):</label>
+            <input type="datetime-local" id="event-datetime" required>
+
+            <label>Thumbnail:</label>
+            <input type="file" id="event-thumbnail" accept="image/*">
+
+            <label>User Limit:</label>
+            <input type="number" id="event-limit" required>
+
+            <label>Venue:</label>
+            <input type="text" id="event-venue" required>
+
+            <label>Event Type:</label>
+            <select id="event-type">
+                <option value="hackathon">Hackathon</option>
+                <option value="workshop">Workshop</option>
+                <option value="program">Program</option>
+            </select>
+
+            <input type="hidden" id="event-id">
+
+            <button type="submit">Save Event</button>
+        </form>
+    </div>
+
+    <!-- Events Table -->
+    <div class="container">
+        <h2 class="table-title">Events List</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date & Time</th>
+                        <th>Thumbnail</th>
+                        <th>Users Limit</th>
+                        <th>Venue</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="events-list"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+
+</body>
+</html>
+
+<script>
+    // Sidebar Dropdown Toggle
+    const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+    dropdownBtns.forEach(dropdownBtn => {
+        dropdownBtn.addEventListener("click", () => {
+            const dropdownContainer = dropdownBtn.nextElementSibling;  // Get the next <ul> element
+            dropdownContainer.classList.toggle("active");
+        });
+    });
+
+    // Sidebar Toggle Menu Button
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+
+    // Close Sidebar
+    const closeSidebarBtn = document.getElementById("closeSidebar");
+    closeSidebarBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+</script>

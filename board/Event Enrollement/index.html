@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standards Club | Board</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">   
+    <link rel="stylesheet" href="./icebreaking.css"> <!-- Link to the CSS file -->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <!-- Header -->
+    <header>
+        <img src="../assets/logo.png" alt="Logo">
+        <h1>Standards Club VITv</h1>
+        <div class="header-btns">
+            <span id="adminName">Logged in as: Loading...</span>
+            <button id="menuBtn">☰ Menu</button>
+        </div>
+    </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeSidebar">&times;</button>
+    <ul>
+        <li><a href="../dashboard/">Dashboard</a></li>
+        
+        <!-- Dropdown Menu -->
+        <li>
+            <button class="dropdown-btn">Event details &#9662;</button>
+            <ul class="dropdown-container">
+                <li><a href="../data/">VTOP Enrollment</a></li>
+                <li><a href="../Event Enrollement/">Members Enrolled</a></li>
+            </ul>
+        </li>
+
+        <li><a href="../events/">Event</a></li>
+        <li><a href="../info/">VITian Info</a></li>
+        <li><a href="../Notice/">Post Notice</a></li>
+    </ul>
+</div>
+
+    <!-- Loader Spinner -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Each event will have a table -->
+        <div id="eventsContainer">
+            <!-- Event tables will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Standards Club. All rights reserved.
+    </footer>
+
+</body>
+<script type="module" src="./icebreaking.js"></script>
+</html>
+
+<!-- Script -->
+<script>
+    // Sidebar Dropdown Toggle
+    const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+    dropdownBtns.forEach(dropdownBtn => {
+        dropdownBtn.addEventListener("click", () => {
+            const dropdownContainer = dropdownBtn.nextElementSibling;  // Get the next <ul> element
+            dropdownContainer.classList.toggle("active");
+        });
+    });
+
+    // Sidebar Toggle Menu Button
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+
+    // Close Sidebar
+    const closeSidebarBtn = document.getElementById("closeSidebar");
+    closeSidebarBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+ 

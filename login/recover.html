@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password - Standards Club</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">   
+    <link rel="stylesheet" href="./forgot password.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="../assets/logo.png" alt="Standards Club Logo" class="logo">
+            <span class="club-name">Standards Club VITv</span>
+        </div>
+    </header>
+
+    <!-- Password Reset Container -->
+    <div class="main-container">
+        <h2>Forgot Your Password?</h2>
+        <p>Enter your email, and we'll send you a password reset link.</p>
+        <input type="email" id="resetEmail" placeholder="Enter your email" required>
+        <button onclick="sendResetLink()">Send Reset Link</button>
+        <a href="./index.html" class="goback">Go Back</a>
+    </div>
+
+    <!-- Alert Box -->
+    <div id="alertBox" class="alert"></div>
+
+    <!-- Footer -->
+    <footer>© 2025 Standards Club. All Rights Reserved.</footer>
+
+    <!-- Firebase and JS -->
+    <script type="module" src="./forgot password.js"></script>
+</body>
+</html>

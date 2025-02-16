@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standards Club | Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" defer src="script.js"></script>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">   
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeSidebar">&times;</button>
+        <ul>
+            <li><a href="../dashboard/">Dashboard</a></li>
+            
+            <!-- Dropdown Menu -->
+            <li>
+                <button class="dropdown-btn">Event details &#9662;</button>
+                <ul class="dropdown-container">
+                    <li><a href="../data/">VTOP Enrollment</a></li>
+                    <li><a href="../Event Enrollement/">Members Enrolled</a></li>
+                </ul>
+            </li>
+
+            <li><a href="../events/">Event</a></li>
+            <li><a href="../info/">VITian Info</a></li>
+            <li><a href="../Notice/">Post Notice</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <img src="../assets/logo.png" alt="Logo">
+        <h1>Standards Club VITv</h1>
+        <div class="header-btns">
+            <span id="adminName">Logged in as: Loading...</span>
+            <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+            <button id="downloadExcel">Download Excel</button>
+        </div>
+    </header>
+
+   <!-- Main Content -->
+<main>
+    <div class="container">
+        <!-- Title for the table -->
+        <h2 class="table-title">VTOP Enrollment List</h2>
+        
+        <div class="table-container">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>S.No.</th> 
+                        <th>Student Name</th>
+                        <th>Register Number</th>
+                        <th>Email ID</th>
+                        <th>Mobile No</th>
+                        <th>Enroll Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be injected here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Firestore Data | All Rights Reserved
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
+
+<script>
+    // Sidebar Dropdown Toggle
+    const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+    dropdownBtns.forEach(dropdownBtn => {
+        dropdownBtn.addEventListener("click", () => {
+            const dropdownContainer = dropdownBtn.nextElementSibling;  // Get the next <ul> element
+            dropdownContainer.classList.toggle("active");
+        });
+    });
+
+    // Sidebar Toggle Menu Button
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+
+    // Close Sidebar
+    const closeSidebarBtn = document.getElementById("closeSidebar");
+    closeSidebarBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+</script>

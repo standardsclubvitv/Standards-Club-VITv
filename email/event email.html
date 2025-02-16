@@ -1,0 +1,44 @@
+
+        <div style="font-family: Arial, sans-serif; background-color: #121212; color: #fff; padding: 20px; text-align: center;">
+            
+            <!-- Header with Logo -->
+            <div style="background: #1e1e1e; padding: 15px; border-bottom: 3px solid #d4af37;">
+                <img src="https://example.com/club-logo.png" alt="Standards Club Logo" style="height: 60px;">
+                <h2 style="color: #d4af37; margin: 10px 0;">Standards Club - VIT</h2>
+            </div>
+
+            <!-- Event Card -->
+            <div style="background: #222; padding: 20px; border-radius: 8px; text-align: left; box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3); max-width: 600px; margin: auto;">
+                <img src="${eventThumbnail}" alt="${eventName}" style="width: 100%; height: auto; border-radius: 8px;">
+                <h3 style="color: #f5c518; font-size: 22px; margin-top: 15px;">${eventName}</h3>
+                <p style="font-size: 16px;"><strong>Date & Time:</strong> ${formattedDateTime}</p>
+                <p style="font-size: 16px;"><strong>Venue:</strong> ${eventVenue}</p>
+                <p style="margin-top: 15px;">✅ You have successfully registered for this event!</p>
+                <p>⚠️ <strong>Important:</strong> Please register on <strong>VTOP</strong> to complete the OD process.</p>
+
+                <!-- Register on VTOP Button -->
+                <div style="margin-top: 20px; text-align: center;">
+                    <a href="https://vtop.vit.ac.in" 
+                       style="background-color: #f5c518; color: black; padding: 12px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block;">
+                        Register on VTOP
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div style="margin-top: 30px;">
+                <p>Follow us for updates:</p>
+                <a href="https://instagram.com/standardsclub" target="_blank" style="margin: 0 10px;">
+                    <img src="https://example.com/instagram-icon.png" alt="Instagram" style="height: 30px;">
+                </a>
+                <a href="https://linkedin.com/company/standards-club-vit" target="_blank" style="margin: 0 10px;">
+                    <img src="https://example.com/linkedin-icon.png" alt="LinkedIn" style="height: 30px;">
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <footer style="margin-top: 20px; font-size: 14px; color: #d4af37;">
+                &copy; ${new Date().getFullYear()} Standards Club, VIT | All Rights Reserved
+            </footer>
+        </div>
+

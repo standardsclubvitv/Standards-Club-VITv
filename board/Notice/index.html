@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standards Club | Board</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">   
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <img src="../assets/logo.png" alt="Logo">
+        <h1>Standards Club VITv</h1>
+        <div class="header-btns">
+            <span id="admin-name"></span>
+            <button onclick="toggleSidebar()">☰ Menu</button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeSidebar">&times;</button>
+        <ul>
+            <li><a href="../dashboard/">Dashboard</a></li>
+            
+            <!-- Dropdown Menu -->
+            <li>
+                <button class="dropdown-btn">Event details &#9662;</button>
+                <ul class="dropdown-container">
+                    <li><a href="../data/">VTOP Enrollment</a></li>
+                    <li><a href="../Event Enrollement/">Members Enrolled</a></li>
+                </ul>
+            </li>
+
+            <li><a href="../events/">Event</a></li>
+            <li><a href="../info/">VITian Info</a></li>
+            <li><a href="../Notice/">Post Notice</a></li>
+        </ul>
+    </div>
+
+    <!-- Notice Form -->
+    <div class="container">
+        <div class="table-container">
+            <h2 class="table-title">Post a Notice</h2>
+            <textarea id="notice-text" placeholder="Enter your notice here..."></textarea>
+            <button id="post-notice">Post Notice</button>
+        </div>
+    </div>
+
+    <!-- Notice Table -->
+    <div class="container">
+        <div class="table-container">
+            <h2 class="table-title">Posted Notices</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Notice</th>
+                        <th>Admin</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="notice-list"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./scripts.js" type="module"></script>
+</body>
+</html>
+
+<script>
+    // Sidebar Dropdown Toggle
+    const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+    dropdownBtns.forEach(dropdownBtn => {
+        dropdownBtn.addEventListener("click", () => {
+            const dropdownContainer = dropdownBtn.nextElementSibling;  // Get the next <ul> element
+            dropdownContainer.classList.toggle("active");
+        });
+    });
+
+    // Sidebar Toggle Menu Button
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+
+    // Close Sidebar
+    const closeSidebarBtn = document.getElementById("closeSidebar");
+    closeSidebarBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+</script>

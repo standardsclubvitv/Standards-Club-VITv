@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standards Club | VITian</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Wrapper to keep footer at bottom -->
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <img src="../assets/logo.png" alt="Logo" class="logo">
+                <h1>Standards Club VITv</h1>
+            </div>
+            <button id="menuBtn" class="header-btn">Menu</button>
+        </header>
+
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <button class="close-btn" id="closeSidebar">&times;</button>
+            <ul>
+                <li><a href="../dashboard/">Dashboard</a></li>
+                <li><a href="../Events/">Events</a></li>
+                <li><a href="../profile/">Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- Profile Section -->
+        <div class="container">
+            <div class="profile-card">
+                <h2>Welcome, <span id="userName"></span></h2>
+                <p><strong>Email:</strong> <span id="userEmail"></span></p>
+                <p><strong>Mobile:</strong> <span id="userMobile"></span></p>
+                <p><strong>Registration No:</strong> <span id="userRegNo"></span></p>
+            </div>
+        </div>
+
+    </div> <!-- End Wrapper -->
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Standards Club. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

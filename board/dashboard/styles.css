@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    border-bottom: 3px solid #d4af37;
+}
+
+header img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: #d4af37;
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.header-btns button {
+    background-color: #d4af37;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header-btns button:hover {
+    background-color: #b9932c;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    padding-top: 60px;
+    transition: 0.4s;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #d4af37;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 12px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background: #444;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    text-align: left;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background: #444;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+    background-color: #333;
+}
+
+.dropdown-container li {
+    padding: 12px;
+}
+
+.dropdown-container li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-container li a:hover {
+    background: #555;
+}
+
+
+/* Stats Section */
+.container {
+    max-width: 90%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.user-count {
+    font-size: 24px;
+    color: #d4af37;
+}
+
+.user-count p {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Graph */
+.chart-container {
+    width: 60%;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #d4af37;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Stats Section */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.user-count {
+    font-size: 24px;
+    color: #d4af37;
+}
+
+.user-count p {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Graph */
+.chart-container {
+    width: 50%;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+}
+
+#adminName {
+    color: #d4af37; /* Gold color */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.dropdown-btn {
+    background-color: #d4a017; /* Dark Yellow */
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-btn:hover {
+    background-color: #b8860b; /* Slightly darker yellow on hover */
+}
+
+#logoutBtn {
+    background-color: #d9534f; /* Red */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#logoutBtn:hover {
+    background-color: #c9302c; /* Darker red */
+}
