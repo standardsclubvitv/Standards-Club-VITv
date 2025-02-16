@@ -95,7 +95,7 @@ fetchUserCount();
 document.getElementById("logoutBtn").addEventListener("click", () => {
     signOut(auth).then(() => {
         alert("Logged out successfully!");
-        window.location.href = "/login/"; // Redirect to login page
+        window.location.href = "./login/"; // Redirect to login page
     }).catch((error) => {
         console.error("Logout Error:", error);
         alert("Error logging out. Please try again.");
