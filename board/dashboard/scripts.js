@@ -107,6 +107,6 @@ onAuthStateChanged(auth, (user) => {
         fetchAdminName(user);
     } else {
         // Redirect to login page if not logged in
-        window.location.href = "/login/";
+        window.location.href = "./login/";
     }
 });
