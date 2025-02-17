@@ -95,7 +95,7 @@ fetchUserCount();
 document.getElementById("logoutBtn").addEventListener("click", () => {
     signOut(auth).then(() => {
         alert("Logged out successfully!");
-        window.location.href = "../../login/"; // Redirect to login page
+        window.location.href = "../../login/index.html"; // Redirect to login page
     }).catch((error) => {
         console.error("Logout Error:", error);
         alert("Error logging out. Please try again.");
@@ -107,6 +107,6 @@ onAuthStateChanged(auth, (user) => {
         fetchAdminName(user);
     } else {
         // Redirect to login page if not logged in
-        window.location.href = "../../login/";
+        window.location.href = "../../login/index.html";
     }
 });
