@@ -93,13 +93,13 @@ onAuthStateChanged(auth, (user) => {
         fetchAdminName(user);
     } else {
         // Redirect to login page if not logged in
-        window.location.href = "/login/";
+        window.location.href = "../../login/index.html";
     }
 });
 
 document.getElementById("logoutBtn").addEventListener("click", () => {
     signOut(auth).then(() => {
-        window.location.href = "/login/"; // Redirect to login page
+        window.location.href = "../../login/index.html"; // Redirect to login page
     }).catch((error) => {
         console.error("Logout Error:", error);
     });
