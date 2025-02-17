@@ -134,7 +134,7 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
 
         showLoader(false);
         showAlert("Login successful! Redirecting...", "success");
-        setTimeout(() => window.location.href = "/VITian/dashboard/", 2000);
+        setTimeout(() => window.location.href = "VITian/dashboard/", 2000);
     } catch (error) {
         showLoader(false);
         let errorMessage = "Login failed!";
