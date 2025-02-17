@@ -1,1 +1,112 @@
-const _0x5c4f1d=_0x4d03;(function(_0x2f5278,_0xcfd8ed){const _0x7baf0d=_0x4d03,_0x43349b=_0x2f5278();while(!![]){try{const _0x1973a2=parseInt(_0x7baf0d(0x194))/0x1*(parseInt(_0x7baf0d(0x188))/0x2)+parseInt(_0x7baf0d(0x180))/0x3+-parseInt(_0x7baf0d(0x18a))/0x4*(-parseInt(_0x7baf0d(0x19f))/0x5)+-parseInt(_0x7baf0d(0x19c))/0x6*(-parseInt(_0x7baf0d(0x174))/0x7)+parseInt(_0x7baf0d(0x17f))/0x8+-parseInt(_0x7baf0d(0x184))/0x9*(-parseInt(_0x7baf0d(0x19b))/0xa)+-parseInt(_0x7baf0d(0x186))/0xb;if(_0x1973a2===_0xcfd8ed)break;else _0x43349b['push'](_0x43349b['shift']());}catch(_0x2c8584){_0x43349b['push'](_0x43349b['shift']());}}}(_0x51ba,0x99fe0));function _0x51ba(){const _0x193a29=['Admin','pie','addEventListener','remove','95390FUoFQj','7290006QgYPyK','display','textContent','1228705sHRwnQ','getElementById','sidebar','active','Remaining\x20Capacity','Logged\x20in\x20as:\x20Unknown','getContext','7hlTRDr','Logged\x20in\x20as:\x20','userChart','Users','white','./login/','adminName','userTotal','logoutBtn','href','catch','2438488TtEtmo','2548440YvFhSf','loader','data','Error\x20logging\x20out.\x20Please\x20try\x20again.','963KMiawO','#d4af37','51696183rIIQog','classList','1423470vlPLrx','flex','20hVlKJh','Logged\x20out\x20successfully!','none','Logout\x20Error:','1:313100673493:web:4f2ba97f24ed95621fdd5c','error','AIzaSyBbpEZD-Hq0bs44lG7PfSER6fg4wbNgtWY','exists','click','#444','1YTzQzL','closeSidebar','style'];_0x51ba=function(){return _0x193a29;};return _0x51ba();}function _0x4d03(_0x57d9b6,_0x36d65f){const _0x51baa0=_0x51ba();return _0x4d03=function(_0x4d0360,_0x1638d5){_0x4d0360=_0x4d0360-0x170;let _0x52e4d7=_0x51baa0[_0x4d0360];return _0x52e4d7;},_0x4d03(_0x57d9b6,_0x36d65f);}import{initializeApp}from'https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js';import{getFirestore,collection,getDocs,doc,getDoc}from'https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js';import{getAuth,onAuthStateChanged,signOut}from'https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js';const firebaseConfig={'apiKey':_0x5c4f1d(0x190),'authDomain':'standards-club-vitv-74474.firebaseapp.com','projectId':'standards-club-vitv-74474','storageBucket':'standards-club-vitv-74474.firebasestorage.app','messagingSenderId':'313100673493','appId':_0x5c4f1d(0x18e),'measurementId':'G-KBKCTVQG5K'},app=initializeApp(firebaseConfig),db=getFirestore(app),auth=getAuth(app);document[_0x5c4f1d(0x1a0)]('menuBtn')[_0x5c4f1d(0x199)]('click',()=>{const _0x37335a=_0x5c4f1d;document['getElementById'](_0x37335a(0x1a1))[_0x37335a(0x187)]['add'](_0x37335a(0x170));}),document[_0x5c4f1d(0x1a0)](_0x5c4f1d(0x195))[_0x5c4f1d(0x199)](_0x5c4f1d(0x192),()=>{const _0x457478=_0x5c4f1d;document[_0x457478(0x1a0)](_0x457478(0x1a1))['classList'][_0x457478(0x19a)]('active');});async function fetchAdminName(_0xdfb004){const _0x1b8199=_0x5c4f1d;if(!_0xdfb004)return;const _0x40a5f9=doc(db,_0x1b8199(0x177),_0xdfb004['uid']),_0x57f394=await getDoc(_0x40a5f9);if(_0x57f394[_0x1b8199(0x191)]()){const _0x3959c7=_0x57f394[_0x1b8199(0x182)]()['name']||_0x1b8199(0x197);document[_0x1b8199(0x1a0)](_0x1b8199(0x17a))[_0x1b8199(0x19e)]=_0x1b8199(0x175)+_0x3959c7;}else document[_0x1b8199(0x1a0)](_0x1b8199(0x17a))[_0x1b8199(0x19e)]=_0x1b8199(0x172);}onAuthStateChanged(auth,_0x672ebb=>{const _0x26e344=_0x5c4f1d;_0x672ebb?fetchAdminName(_0x672ebb):document[_0x26e344(0x1a0)](_0x26e344(0x17a))[_0x26e344(0x19e)]='Not\x20Logged\x20In';});async function fetchUserCount(){const _0x23a3da=_0x5c4f1d;document[_0x23a3da(0x1a0)](_0x23a3da(0x181))[_0x23a3da(0x196)][_0x23a3da(0x19d)]=_0x23a3da(0x189);const _0xbbc1f8=collection(db,_0x23a3da(0x177)),_0x495b90=await getDocs(_0xbbc1f8),_0x1f2000=_0x495b90['size'];document['getElementById'](_0x23a3da(0x17b))[_0x23a3da(0x19e)]=_0x1f2000,document[_0x23a3da(0x1a0)]('loader')[_0x23a3da(0x196)]['display']=_0x23a3da(0x18c),renderPieChart(_0x1f2000);}function renderPieChart(_0x102aa9){const _0xe19228=_0x5c4f1d,_0x1947ae=document[_0xe19228(0x1a0)](_0xe19228(0x176))[_0xe19228(0x173)]('2d');new Chart(_0x1947ae,{'type':_0xe19228(0x198),'data':{'labels':[_0xe19228(0x177),_0xe19228(0x171)],'datasets':[{'data':[_0x102aa9,0x3e8-_0x102aa9],'backgroundColor':[_0xe19228(0x185),_0xe19228(0x193)]}]},'options':{'responsive':!![],'plugins':{'legend':{'labels':{'color':_0xe19228(0x178)}}}}});}fetchUserCount(),document[_0x5c4f1d(0x1a0)](_0x5c4f1d(0x17c))[_0x5c4f1d(0x199)](_0x5c4f1d(0x192),()=>{const _0x5a1c4e=_0x5c4f1d;signOut(auth)['then'](()=>{const _0x495cc7=_0x4d03;alert(_0x495cc7(0x18b)),window['location'][_0x495cc7(0x17d)]=_0x495cc7(0x179);})[_0x5a1c4e(0x17e)](_0x2e268c=>{const _0x18168a=_0x5a1c4e;console[_0x18168a(0x18f)](_0x18168a(0x18d),_0x2e268c),alert(_0x18168a(0x183));});}),onAuthStateChanged(auth,_0x19a0c2=>{const _0x2281b3=_0x5c4f1d;_0x19a0c2?fetchAdminName(_0x19a0c2):window['location'][_0x2281b3(0x17d)]=_0x2281b3(0x179);});
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+import { getFirestore, collection, getDocs, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+
+// Firebase Configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyBbpEZD-Hq0bs44lG7PfSER6fg4wbNgtWY",
+    authDomain: "standards-club-vitv-74474.firebaseapp.com",
+    projectId: "standards-club-vitv-74474",
+    storageBucket: "standards-club-vitv-74474.firebasestorage.app",
+    messagingSenderId: "313100673493",
+    appId: "1:313100673493:web:4f2ba97f24ed95621fdd5c",
+    measurementId: "G-KBKCTVQG5K"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+// Sidebar Toggle
+document.getElementById("menuBtn").addEventListener("click", () => {
+    document.getElementById("sidebar").classList.add("active");
+});
+document.getElementById("closeSidebar").addEventListener("click", () => {
+    document.getElementById("sidebar").classList.remove("active");
+});
+
+// Fetch Logged-in Admin Name
+async function fetchAdminName(user) {
+    if (!user) return;
+    
+    const userDocRef = doc(db, "Users", user.uid);
+    const userDocSnap = await getDoc(userDocRef);
+
+    if (userDocSnap.exists()) {
+        const adminName = userDocSnap.data().name || "Admin";
+        document.getElementById("adminName").textContent = `Logged in as: ${adminName}`;
+    } else {
+        document.getElementById("adminName").textContent = "Logged in as: Unknown";
+    }
+}
+
+// Monitor Authentication State
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        fetchAdminName(user);
+    } else {
+        document.getElementById("adminName").textContent = "Not Logged In";
+    }
+});
+
+// Fetch User Data
+async function fetchUserCount() {
+    document.getElementById("loader").style.display = "flex";
+
+    const usersCollection = collection(db, "Users");
+    const usersSnapshot = await getDocs(usersCollection);
+    const userCount = usersSnapshot.size;
+
+    document.getElementById("userTotal").textContent = userCount;
+    document.getElementById("loader").style.display = "none";
+
+    renderPieChart(userCount);
+}
+
+// Render Pie Chart
+function renderPieChart(userCount) {
+    const ctx = document.getElementById("userChart").getContext("2d");
+
+    new Chart(ctx, {
+        type: "pie",
+        data: {
+            labels: ["Users", "Remaining Capacity"],
+            datasets: [{
+                data: [userCount, 1000 - userCount],  // Assuming max capacity is 1000
+                backgroundColor: ["#d4af37", "#444"]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: { color: "white" }
+                }
+            }
+        }
+    });
+}
+
+
+// Fetch Data on Load
+fetchUserCount();
+
+document.getElementById("logoutBtn").addEventListener("click", () => {
+    signOut(auth).then(() => {
+        alert("Logged out successfully!");
+        window.location.href = "../login/"; // Redirect to login page
+    }).catch((error) => {
+        console.error("Logout Error:", error);
+        alert("Error logging out. Please try again.");
+    });
+});
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        fetchAdminName(user);
+    } else {
+        // Redirect to login page if not logged in
+        window.location.href = "../login/";
+    }
+});
