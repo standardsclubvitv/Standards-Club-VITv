@@ -2,367 +2,310 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Standards Club VITv</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <!-- Meta Description (Important for SEO) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT Club Page</title>
     <meta name="description"
         content="Welcome to the VIT Standards Club. Explore our events, board members, and updates. Join us in standards club VIT!">
-
-    <!-- Keywords (Not as important now, but can help) -->
     <meta name="keywords" content="VIT, Standards Club, Events, Vellore Institute of Technology, Technical Club, BIS">
-
-    <!-- Author -->
-    <meta name="author" content="VIT Standards Club">
-
-    <!-- Open Graph (OG) Tags for Social Media Sharing -->
-    <meta property="og:title" content="VIT Standards Club | Official Website">
+    <meta name="author" content="Pranav Rayban (Development Head)">
+    <meta property="og:title" content="Standards Club VIT">
     <meta property="og:description"
         content="Explore the VIT Standards Club - Stay updated on events, board members, and more!">
     <meta property="og:image" content="https://standardsclubvitv.github.io/Standards-Club/image/logo.png">
     <meta property="og:url" content="https://standardsclubvitv.github.io/Standards-Club/">
     <meta property="og:type" content="website">
-
-    <!-- Twitter Card for Better Sharing on Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VIT Standards Club | Official Website">
-    <meta name="twitter:description"
-        content="Explore the VIT Standards Club - Stay updated on events, board members, and more!">
-    <meta name="twitter:image" content="https://standardsclubvitv.github.io/Standards-Club/image/logo.png">
-
-    <!-- Favicon (Make sure you have a favicon.ico or PNG in the assets folder) -->
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/png" href="./image/logo_club.png">
-
-    <!-- Robots (Allows search engines to index the page) -->
-    <meta name="robots" content="index, follow">
-
-    <!-- Theme Color for Mobile Browsers -->
-    <meta name="theme-color" content="#000000">
-
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logos">
-            <img src="./image/Vit logo gold.png" alt="College Logo" class="college-logo" />
-            <div class="club-logo">
-                <img src="./image/logo_club.png" alt="Club Logo" />
+
+    <div class="home" id="move_to_home">
+        <div class="home-1">
+            <div class="hm-1">
+                <img src="./image/Instagram post - 1.png" alt="Standards Club">
+                <div class="write">
+                    <h1>Standards Club</h1>
+                    <span class="title__below">Bureau of Indian Standards (BIS) - VIT</span><br />
+                    <p class="write__below">
+                        The Standards Club at Vellore Institute of Technology (VIT) is dedicated to promoting awareness
+                        and understanding of the Bureau of Indian Standards (BIS). Join us in shaping quality and
+                        excellence in various fields.
+                    </p>
+                </div>
+            </div>
+            <div class="slideshow-container">
+                <div class="slide"><img src="../image/event1.JPG" alt="Image 1"></div>
+                <div class="slide"><img src="../image/event2.JPG" alt="Image 2"></div>
+                <div class="slide"><img src="../image/event3.JPG" alt="Image 3"></div>
+                <div class="slide"><img src="../image/event4.JPG" alt="Image 4"></div>
+                <div class="slide"><img src="../image/event5.JPG" alt="Image 5"></div>
+
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#board">Board</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="./login/">Portal</a></li>
-            </ul>
+        <div class="home-2">
+            <div class="follow">
+                <h3>Follow us on</h3>
+                <div class="follow-inner">
+                    <a href="https://www.instagram.com/yourclub/" target="_blank">
+                        <button>
+                            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram Icon"
+                                width="24" height="24">
+                            <span> Instagram</span>
+                        </button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourclub" target="_blank">
+                        <button>
+                            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon"
+                                width="24" height="24">
+                            <span> LinkedIn</span>
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <header class="header">
+        <div class="logo">
+            <img src="../image/logo_club.png" alt="Club Logo">
+        </div>
+
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+
+        <nav class="nav">
+            <a href="#move_to_home" class="active">Home</a>
+            <a href="#about-us">About Us</a>
+
+
+            <div class="dropdown">
+                <a href="#">Events ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+
+            <a href="#board-members">Board Members</a>
+            <div class="dropdown">
+                <a href="#">Join Our Club ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#join-club">Get Email</a></li>
+                    <li><a href="#" id="portal-link">Portal</a></li>
+
+
+                </ul>
+            </div>
         </nav>
+
     </header>
 
-    <video class="video-background" autoplay muted loop>
-        <source src="./image/9694804-sd_506_960_25fps.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-    </video>
-    <!-- Hero Section -->
-    <section class="hero">
-        <video autoplay loop muted playsinline class="hero-video">
-            Your browser does not support the video tag.
-        </video>
-        <h2 class="animated-text">
-            Welcome to the VIT Standards Club – Elevating Excellence with VITV
-        </h2>
-    </section>
-    <!-- About Club -->
-    <section id="about" class="container">
-        <h2>About Us</h2>
-        <p class="dynamic-text">
-            The <strong>Bureau of Indian Standards (BIS)</strong>, the National
-            Standards Body of India, is implementing the programme of
-            <strong>Standard Clubs</strong> in schools and colleges across the
-            country.
-        </p>
-        <p class="dynamic-text">
-            The <strong>Standards Club</strong> is established with the objective of
-            sensitizing young members of society about the importance of standards
-            in improving the quality of life.
-        </p>
-        <p class="dynamic-text">
-            Our mission is to transform young minds into knowledgeable ambassadors
-            of quality and standards in everything around them.
-        </p>
-    </section>
 
-    <!-- Board Members -->
-    <section id="board" class="container">
-        <h2>Meet Our <span class="highlight">TEAM</span></h2>
-        <div class="swiper board-carousel">
-            <div class="swiper-wrapper">
-                <!-- Chairperson -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/giridhar.jpg" alt="Giridhar R" />
-                        <div class="member-info">
-                            <h3>Giridhar R</h3>
-                            <p>Chairperson</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Vice Chairperson -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/navyatha.jpg" alt="Navyatha" />
-                        <div class="member-info">
-                            <h3>Navyatha</h3>
-                            <p>Vice Chairperson</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Secretary -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/antony.jpg" alt="Antony Paul" />
-                        <div class="member-info">
-                            <h3>Antony Paul</h3>
-                            <p>Secretary</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Co-Secretary -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/siddharth.jpg" alt="J Siddharth" />
-                        <div class="member-info">
-                            <h3>J Siddharth</h3>
-                            <p>Co-Secretary</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web Design/Management Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/Pranav Profile.jpg" alt="Pranav" />
-                        <div class="member-info">
-                            <h3>Pranav Rayban</h3>
-                            <p>Web Design/Management Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Creative Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/indrajit.jpg" alt="Indrajit TV" />
-                        <div class="member-info">
-                            <h3>Indrajit TV</h3>
-                            <p>Creative Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Design Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/ananthu.jpg" alt="Ananthu Suresh" />
-                        <div class="member-info">
-                            <h3>Ananthu Suresh</h3>
-                            <p>Design Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Events Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/akshaya.jpg" alt="Akshaya Ashok Nair" />
-                        <div class="member-info">
-                            <h3>Akshaya Ashok Nair</h3>
-                            <p>Events Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Management Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/amrith.jpg" alt="Amrith Raj" />
-                        <div class="member-info">
-                            <h3>Amrith Raj</h3>
-                            <p>Management Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projects Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/shashanka.jpg" alt="Shashanka Bhat" />
-                        <div class="member-info">
-                            <h3>Shashanka Bhat</h3>
-                            <p>Projects Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technical Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/sasshank.jpg" alt="Sasshank" />
-                        <div class="member-info">
-                            <h3>Sasshank</h3>
-                            <p>Technical Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- HR Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/eshal.jpg" alt="Eshal Shanoj" />
-                        <div class="member-info">
-                            <h3>Eshal Shanoj</h3>
-                            <p>HR Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Outreach Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/vinayak.jpg" alt="Vinayak C Nair" />
-                        <div class="member-info">
-                            <h3>Vinayak C Nair</h3>
-                            <p>Outreach Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Editorial Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/shikha.jpg" alt="Shikha" />
-                        <div class="member-info">
-                            <h3>Shikha</h3>
-                            <p>Editorial Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Finance Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/devadutt.jpg" alt="Devadutt" />
-                        <div class="member-info">
-                            <h3>Devadutt</h3>
-                            <p>Finance Head</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Publicity Head -->
-                <div class="swiper-slide">
-                    <div class="member-card">
-                        <img src="./image/archa.jpg" alt="Archa" />
-                        <div class="member-info">
-                            <h3>Archa</h3>
-                            <p>Publicity Head</p>
-                        </div>
-                    </div>
-                </div>
+    <main class="content-container" id="about-us">
+        <div class="info-section">
+            <div class="info-text">
+                <h2>About BIS Standards</h2>
+                <p>
+                    The Bureau of Indian Standards (BIS) is the national standards body of India, ensuring
+                    quality and safety across industries. BIS plays a crucial role in setting benchmarks
+                    for various products, services, and processes, promoting reliability and trust in the
+                    marketplace.
+                </p>
+                <p>
+                    Through its certification programs, BIS helps in maintaining high-quality standards,
+                    ensuring consumer safety, and facilitating international trade.
+                </p>
             </div>
-
-            <!-- Navigation Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
-
-    <!-- Past Events -->
-    <section id="events" class="container events-container">
-        <h2 class="section-title">Past Events</h2>
-        <div class="marquee-wrapper">
-            <div class="marquee-content">
-                <img src="./image/event1.JPG" alt="Event 1" />
-                <img src="./image/event2.JPG" alt="Event 2" />
-                <img src="./image/event3.JPG" alt="Event 3" />
-                <img src="./image/event4.JPG" alt="Event 4" />
-                <img src="./image/event5.JPG" alt="Event 5" />
-                <img src="./image/event6.JPG" alt="Event 6" />
-                <img src="./image/event7.JPG" alt="Event 7" />
-                <img src="./image/event8.png" alt="Event 8" />
-                <img src="./image/event9.JPG" alt="Event 9" />
-                <img src="./image/event10.JPG" alt="Event 10" />
-            </div>
-            <div class="marquee-content">
-                <!-- Duplicate for seamless infinite scroll -->
-                <img src="./image/event1.JPG" alt="Event 1" />
-                <img src="./image/event2.JPG" alt="Event 2" />
-                <img src="./image/event3.JPG" alt="Event 3" />
-                <img src="./image/event4.JPG" alt="Event 4" />
-                <img src="./image/event5.JPG" alt="Event 5" />
-                <img src="./image/event6.JPG" alt="Event 6" />
-                <img src="./image/event7.JPG" alt="Event 7" />
-                <img src="./image/event8.png" alt="Event 8" />
-                <img src="./image/event9.JPG" alt="Event 9" />
-                <img src="./image/event10.JPG" alt="Event 10" />
+            <div class="info-image">
+                <img src="./image/BIS.jpeg" alt="BIS Standards Image">
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <!-- Club Logo -->
-            <img src="./image/logo_club.png" alt="Standards Club Logo" class="footer-logo" />
-            <p class="remark">Designed & Developed by <span class="highlight">Pranav Rayban</span></p>
 
-            <!-- Social Media Links -->
-            <div class="footer-text">
-                <p>Follow us for updates:</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/yourclubusername" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/yourclubusername" target="_blank">
-                        <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" />
-                    </a>
-                </div>
+    <section id="board-members" class="board-members-container">
+        <h2>Executive Board</h2>
+        <button class="nav-button left" onclick="scrollLeft()">&#10094;</button>
+        <div class="board-members">
+            <div class="board-member">
+                <img src="./image/Mentor.jpg" alt="Renold Elsen S">
+                <h3>Renold Elsen S</h3>
+                <p>Mentor</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="../image/giri .jpg" alt="Giridhar R">
+                <h3>Giridhar R</h3>
+                <p>Chairperson</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Navyatha">
+                <h3>Navyatha</h3>
+                <p>Vice Chairperson</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Antony Paul">
+                <h3>Antony Paul</h3>
+                <p>Secretary</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/siddhart J.jpg" alt="J Siddharth">
+                <h3>J Siddharth</h3>
+                <p>Co-Secretary</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="../image/Pranav Profile.jpg" alt="Pranav">
+                <h3>Pranav Rayban</h3>
+                <p>Development Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="../image/Indrajit .jpg" alt="Indrajit TV">
+                <h3>Indrajit TV</h3>
+                <p>Creative Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Ananthu Suresh">
+                <h3>Ananthu Suresh</h3>
+                <p>Design Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Akshaya Ashok Nair">
+                <h3>Akshaya Ashok Nair</h3>
+                <p>Events Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="../image/Amrith raj.jpg" alt="Amrith Raj">
+                <h3>Amrith Raj</h3>
+                <p>Management Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Shashanka Bhat">
+                <h3>Shashanka Bhat</h3>
+                <p>Projects Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Sashank">
+                <h3>Sashank</h3>
+                <p>Technical Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Eshal Shanoj">
+                <h3>Eshal Shanoj</h3>
+                <p>HR Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Vinayak C Nair">
+                <h3>Vinayak C Nair</h3>
+                <p>Outreach Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Shikha">
+                <h3>Shikha</h3>
+                <p>Editorial Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Devadutt">
+                <h3>Devadutt</h3>
+                <p>Finance Head</p>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="board-member">
+                <img src="./image/default.jpeg" alt="Archa">
+                <h3>Archa</h3>
+                <p>Publicity Head</p>
+                <a href="#">LinkedIn</a>
             </div>
         </div>
-    </footer>
+        <button class="nav-button left" onclick="scrollBoardLeft()">&#10094;</button>
+        <button class="nav-button right" onclick="scrollBoardRight()">&#10095;</button>
+
+    </section>
+
+    <section id="join-club" class="join-club-container">
+        <h2>Join Our Club</h2>
+        <p>Enter your email below to receive a confirmation email and join our club!</p>
+        <form id="join-club-form">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Join Now</button>
+        </form>
+        <p id="response-message"></p>
+    </section>
 
     <script src="./script.js"></script>
 </body>
 
 </html>
 
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script>
+    let slideIndex = 0;
+    showSlides();
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    function showSlides() {
+        let slides = document.querySelectorAll(".slide");
+        slides.forEach(slide => slide.style.display = "none");
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000);
+    }
+
+    function changeSlide(n) {
+        slideIndex += n - 1;
+        showSlides();
+    }
+</script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="../image/logo_club.png" alt="Club Logo">
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2025 Standards Club - VIT. All rights reserved.</p>
+        </div>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/yourclub/" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/yourclub" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+</footer>
 
 <script>
-    var swiper = new Swiper(".board-carousel", {
-        slidesPerView: 1, // Default for mobile
-        spaceBetween: 20,
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 3, // Show 3 members at a time on desktop
-                spaceBetween: 30,
-                loop: false, // Disable looping on desktop
-            },
-        },
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("portal-link").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default behavior
+            window.location.href = "./login/index.html  "; // Redirect to login page
+        });
     });
-</script>
+
+</script>   
