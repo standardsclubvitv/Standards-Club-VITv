@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Standards Club | VITv</title>
+    <title>VIT Club Page</title>
     <meta name="description"
         content="Welcome to the VIT Standards Club. Explore our events, board members, and updates. Join us in standards club VIT!">
     <meta name="keywords" content="VIT, Standards Club, Events, Vellore Institute of Technology, Technical Club, BIS">
@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://standardsclubvitv.github.io/Standards-Club/image/logo.png">
     <meta property="og:url" content="https://standardsclubvitv.github.io/Standards-Club/">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/png" href="./image/logo_club.png">
 </head>
 
@@ -24,7 +24,7 @@
     <div class="home" id="move_to_home">
         <div class="home-1">
             <div class="hm-1">
-                <img src="./image/Instagram post - 1.png" alt="Standards Club">
+           
                 <div class="write">
                     <h1>Standards Club</h1>
                     <span class="title__below">Bureau of Indian Standards (BIS) - VIT</span><br />
@@ -35,39 +35,27 @@
                     </p>
                 </div>
             </div>
-            <div class="slideshow-container">
-                <div class="slide"><img src="./image/event1.JPG" alt="Image 1"></div>
-                <div class="slide"><img src="./image/event2.JPG" alt="Image 2"></div>
-                <div class="slide"><img src="./image/event3.JPG" alt="Image 3"></div>
-                <div class="slide"><img src="./image/event4.JPG" alt="Image 4"></div>
-                <div class="slide"><img src="./image/event5.JPG" alt="Image 5"></div>
-
-                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeSlide(1)">&#10095;</a>
-            </div>
         </div>
         <div class="home-2">
             <div class="follow">
                 <h3>Follow us on</h3>
                 <div class="follow-inner">
                     <a href="https://www.instagram.com/yourclub/" target="_blank">
-                        <button>
-                            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram Icon"
-                                width="24" height="24">
+                        <button class="instagram-btn">
+                            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram Icon">
                             <span> Instagram</span>
                         </button>
                     </a>
                     <a href="https://www.linkedin.com/in/yourclub" target="_blank">
-                        <button>
-                            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon"
-                                width="24" height="24">
+                        <button class="linkedin-btn">
+                            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon">
                             <span> LinkedIn</span>
                         </button>
                     </a>
                 </div>
-
             </div>
         </div>
+        
     </div>
 
 
@@ -89,25 +77,25 @@
         <nav class="nav">
             <a href="#move_to_home" class="active">Home</a>
             <a href="#about-us">About Us</a>
+            <a href="#board-members">Board Members</a>
 
 
             <div class="dropdown">
                 <a href="#">Events ▼</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#" id="Gallery-link">Gallery</a></li>
                 </ul>
             </div>
-
-            <a href="#board-members">Board Members</a>
+            
             <div class="dropdown">
                 <a href="#">Join Our Club ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="#join-club">Get Email</a></li>
                     <li><a href="#" id="portal-link">Portal</a></li>
-
-
                 </ul>
             </div>
+            
+            
         </nav>
 
     </header>
@@ -257,6 +245,23 @@
         <p id="response-message"></p>
     </section>
 
+    <h2 class="event-title">Our Event</h2>
+    <div class="slideshow-container">
+        <div class="slides">
+            <div class="slide"><img src="./image/event1.JPG" alt="Image 1"></div>
+            <div class="slide"><img src="./image/event2.JPG" alt="Image 2"></div>
+            <div class="slide"><img src="./image/event3.JPG" alt="Image 3"></div>
+            <div class="slide"><img src="./image/event4.JPG" alt="Image 4"></div>
+            <div class="slide"><img src="./image/event5.JPG" alt="Image 5"></div>
+        </div>
+    
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    
+
+
     <script src="./script.js"></script>
 </body>
 
@@ -309,3 +314,23 @@
     });
 
 </script>   
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("Gallery-link").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default behavior
+            window.location.href = "./gallery/index.html"; // Redirect to gallery page
+        });
+    });
+</script>
+
+<script>
+  document.querySelectorAll(".dropdown > a").forEach((dropdown) => {
+    dropdown.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default action
+        let dropdownMenu = this.nextElementSibling;
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+});
+
+</script>
