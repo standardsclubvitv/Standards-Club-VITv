@@ -24,7 +24,7 @@
     <div class="home" id="move_to_home">
         <div class="home-1">
             <div class="hm-1">
-           
+
                 <div class="write">
                     <h1>Standards Club</h1>
                     <span class="title__below">Bureau of Indian Standards (BIS) - VIT</span><br />
@@ -36,26 +36,6 @@
                 </div>
             </div>
         </div>
-        <div class="home-2">
-            <div class="follow">
-                <h3>Follow us on</h3>
-                <div class="follow-inner">
-                    <a href="https://www.instagram.com/yourclub/" target="_blank">
-                        <button class="instagram-btn">
-                            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram Icon">
-                            <span> Instagram</span>
-                        </button>
-                    </a>
-                    <a href="https://www.linkedin.com/in/yourclub" target="_blank">
-                        <button class="linkedin-btn">
-                            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon">
-                            <span> LinkedIn</span>
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
     </div>
 
 
@@ -86,7 +66,7 @@
                     <li><a href="#" id="Gallery-link">Gallery</a></li>
                 </ul>
             </div>
-            
+
             <div class="dropdown">
                 <a href="#">Join Our Club ▼</a>
                 <ul class="dropdown-menu">
@@ -94,8 +74,8 @@
                     <li><a href="#" id="portal-link">Portal</a></li>
                 </ul>
             </div>
-            
-            
+
+
         </nav>
 
     </header>
@@ -254,12 +234,31 @@
             <div class="slide"><img src="./image/event4.JPG" alt="Image 4"></div>
             <div class="slide"><img src="./image/event5.JPG" alt="Image 5"></div>
         </div>
-    
+
         <!-- Navigation Arrows -->
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-    
+
+    <div class="home-2">
+        <div class="follow">
+            <h3>Follow us on</h3>
+            <div class="follow-inner">
+                <a href="https://www.instagram.com/yourclub/" target="_blank">
+                    <button class="instagram-btn">
+                        <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram Icon">
+                        <span> Instagram</span>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/yourclub" target="_blank">
+                    <button class="linkedin-btn">
+                        <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon">
+                        <span> LinkedIn</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
     <script src="./script.js"></script>
@@ -267,24 +266,6 @@
 
 </html>
 
-<script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        let slides = document.querySelectorAll(".slide");
-        slides.forEach(slide => slide.style.display = "none");
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1; }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000);
-    }
-
-    function changeSlide(n) {
-        slideIndex += n - 1;
-        showSlides();
-    }
-</script>
 
 <footer class="footer">
     <div class="footer-container">
@@ -313,7 +294,7 @@
         });
     });
 
-</script>   
+</script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -325,12 +306,20 @@
 </script>
 
 <script>
-  document.querySelectorAll(".dropdown > a").forEach((dropdown) => {
-    dropdown.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default action
-        let dropdownMenu = this.nextElementSibling;
-        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    document.querySelectorAll(".dropdown > a").forEach((dropdown) => {
+        dropdown.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default action
+            let dropdownMenu = this.nextElementSibling;
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        });
     });
-});
+
+</script>
+
+<script>
+    function scrollBoardRight() {
+    let container = document.querySelector('.board-container'); // Update selector if needed
+    container.scrollBy({ left: 200, behavior: 'smooth' });
+}
 
 </script>
