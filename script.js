@@ -71,3 +71,27 @@ function toggleMenu() {
     const nav = document.querySelector('.nav');
     nav.classList.toggle('show-menu');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const boardContainer = document.querySelector('.board-members'); // Select the scrolling container
+
+    function scrollBoardLeft() {
+        if (boardContainer) {
+            boardContainer.scrollBy({ left: -300, behavior: 'smooth' }); // Scroll left
+        } else {
+            console.error("Board container not found.");
+        }
+    }
+
+    function scrollBoardRight() {
+        if (boardContainer) {
+            boardContainer.scrollBy({ left: 300, behavior: 'smooth' }); // Scroll right
+        } else {
+            console.error("Board container not found.");
+        }
+    }
+
+    // Assign functions globally so they work with onclick attributes
+    window.scrollBoardLeft = scrollBoardLeft;
+    window.scrollBoardRight = scrollBoardRight;
+});
