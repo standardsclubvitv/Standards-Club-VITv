@@ -609,39 +609,28 @@ html {
 .gallery-item:hover {
     transform: scale(1.1);
 }
-
-.footer {
-    width: 100%;
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative; /* Change from 'fixed' to 'relative' */
-    bottom: 0;
-}
-
-
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    gap: 20px; /* Add spacing between logo and text */
 }
 
-.footer-logo img {
-    height: 50px; /* Adjust size as needed */
+.footer-logo {
+    flex: 0 0 auto; /* Prevents shrinking */
+    margin-right: 20px; /* Adds space between the logo and text */
 }
 
-.footer-text p {
-    margin: 0;
-    font-size: 14px;
+.footer-text {
+    flex-grow: 1; /* Makes sure text takes available space */
+    text-align: center;
 }
 
-.footer-socials a img {
-    height: 30px; /* Adjust size as needed */
-    margin: 0 5px;
+.footer-socials {
+    flex: 0 0 auto;
 }
 
 /* Responsive adjustments */
@@ -649,11 +638,10 @@ html {
     .footer-container {
         flex-direction: column;
         text-align: center;
-    }
-    .footer-socials {
-        margin-top: 10px;
+        gap: 10px; /* Reduce gap for smaller screens */
     }
 }
+
 
 .event-title {
     text-align: center;
