@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standards | Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button id="menuBtn">☰</button>
+        <h1>Live Firestore Data</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeSidebar">&times;</button>
+        <ul>
+            <li><a href="../dashboard/">Dashboard</a></li>
+            <li>
+                <button class="dropdown-btn">Event details &#9662;</button>
+                <ul class="dropdown-container">
+                    <li><a href="../data/">VTOP Enrollment</a></li>
+                    <li><a href="../DomainSelection/">DomainSelection</a></li>
+                    <li><a href="../Event Enrollement/">Members Enrolled</a></li>
+                </ul>
+            </li>
+            <li><a href="../events/">Event</a></li>
+            <li><a href="../info/">VITian Info</a></li>
+            <li><a href="../Notice/">Post Notice</a></li>
+        </ul>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Table -->
+    <div class="container">
+        <div class="table-container">
+            <h2 class="table-title">Firestore Live Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Phone No.</th>
+                        <th>Reg.No.</th>
+                        <th>Preference: 1,2,3</th>
+
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script type="module" src="./script.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
